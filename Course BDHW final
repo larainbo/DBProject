@@ -1,7 +1,7 @@
 CREATE TABLE Course (
 CourseID INT PRIMARY KEY,
-DepartmentCode Char(4),
-CourseNum INT,
-CourseTitle Char(75),
-CreditHours INT
+DepartmentCode Char(4) NOT NULL,
+CourseNum INT NOT NULL,
+CourseTitle Char(75) NOT NULL,
+CreditHours INT NOT NULL
 )ENGINE = InnoDB;
