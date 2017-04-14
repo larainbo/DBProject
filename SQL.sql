@@ -1,7 +1,7 @@
 CREATE TABLE Student (
 StudentID INT PRIMARY KEY,
 StudentName CHAR(25) NOT NULL,
-StudentMajor Char(25) NOT NULL,
+StudentMajor Char(25) NOT NULL
 )
 ENGINE=innoDB;
 
