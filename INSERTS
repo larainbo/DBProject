@@ -1,0 +1,5 @@
+INSERT INTO Student (StudentID, StudentName, StudentMajor) VALUES (1, 'Lauren', 'Computer Science');
+INSERT INTO Student (StudentID, StudentName, StudentMajor) VALUES (2, 'Trevor', 'Computer Science');
+
+INSERT INTO Enrollment (StudentID, DepartmentCode, CourseNum) VALUES (1, 'CSCE', 1);
+INSERT INTO Enrollment (StudentID, DepartmentCode, CourseNum) VALUES (2, 'CSCE', 2);
