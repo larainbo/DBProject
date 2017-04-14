@@ -10,6 +10,6 @@ StudentID INT,
 DeptCode CHAR(4),
 CourseNum INT,
 FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
-FOREIGN KEY (DeptCode)  REFERENCES Course(DeptCode),
+FOREIGN KEY (DepartmentCode)  REFERENCES Course(DepartmentCode),
 FOREIGN KEY (CourseNum) REFERENCES Course(CourseNum)
 )ENGINE=InnoDB;
