@@ -1,0 +1,24 @@
+| Student | CREATE TABLE `Student` (
+  `StudentId` int(11) NOT NULL DEFAULT '0',
+  `StudentName` varchar(25) NOT NULL,
+  `MajorId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`StudentId`),
+  KEY `MajorId` (`MajorId`),
+  CONSTRAINT `Student_ibfk_1` FOREIGN KEY (`MajorId`) REFERENCES `Major` (`MajorId`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
+
+
+| Major | CREATE TABLE `Major` (
+  `MajorId` int(11) NOT NULL AUTO_INCREMENT,
+  `Major` char(4) NOT NULL,
+  PRIMARY KEY (`MajorId`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 
+
+
+| Jobs  | CREATE TABLE `Jobs` (
+  `JobId` int(11) NOT NULL DEFAULT '0',
+  `CompanyName` varchar(25) NOT NULL,
+  `JobTitle` varchar(25) NOT NULL,
+  `Salary` int(11) DEFAULT NULL,
+  PRIMARY KEY (`JobId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
