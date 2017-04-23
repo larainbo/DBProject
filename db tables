@@ -1,0 +1,31 @@
+ CREATE TABLE Student (
+ StudentId int(11) NOT NULL DEFAULT '0',
+ StudentName varchar(25) NOT NULL,
+ MajorId int(11) DEFAULT NULL,
+ PRIMARY KEY (StudentId),
+ KEY MajorId (MajorId),
+ CONSTRAINT FOREIGN KEY (MajorId) REFERENCES Major (MajorId) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+ CREATE TABLE Major (
+ MajorId int(11) NOT NULL AUTO_INCREMENT,
+ Major char(4) NOT NULL,
+ PRIMARY KEY (MajorId)
+) ENGINE=InnoDB;  
+
+
+ CREATE TABLE Enrollment (
+  EnrollmentID int(11) NOT NULL AUTO_INCREMENT,
+  CourseID int,
+  StudentID int,
+  ClassName varchar(25) NOT NULL,
+  PRIMARY KEY (EnrollmentId),
+  FOREIGN KEY (StudentID) references Student(StudentID)
+) ENGINE=InnoDB;
+
+ CREATE TABLE Users (
+ UserID int PRIMARY KEY AUTO_INCREMENT,
+ UserName varchar(20) UNIQUE NOT NULL,
+ Password varchar(20) NOT NULL
+ ) ENGINE=InnoDB;
