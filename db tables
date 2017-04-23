@@ -16,7 +16,8 @@
 
 CREATE TABLE Course (
 CourseId int(11) NOT NULL AUTO_INCREMENT,
-CourseName char(20) NOT NULL,
+CourseName char(50) NOT NULL,
+DepartmentName char(50) NOT NULL,
 PRIMARY KEY (CourseId)
 ) ENGINE=InnoDB;
 
@@ -24,7 +25,6 @@ PRIMARY KEY (CourseId)
   EnrollmentID int(11) NOT NULL AUTO_INCREMENT,
   CourseID int,
   StudentID int,
-  ClassName varchar(25) NOT NULL,
   PRIMARY KEY (EnrollmentId),
   FOREIGN KEY (StudentID) references Student(StudentID),
   FOREIGN KEY (CourseID) references Course(CourseId)
