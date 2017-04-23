@@ -14,6 +14,11 @@
  PRIMARY KEY (MajorId)
 ) ENGINE=InnoDB;  
 
+CREATE TABLE Course (
+CourseId int(11) NOT NULL AUTO_INCREMENT,
+CourseName char(20) NOT NULL,
+PRIMARY KEY (CourseId)
+) ENGINE=InnoDB;
 
  CREATE TABLE Enrollment (
   EnrollmentID int(11) NOT NULL AUTO_INCREMENT,
@@ -21,7 +26,8 @@
   StudentID int,
   ClassName varchar(25) NOT NULL,
   PRIMARY KEY (EnrollmentId),
-  FOREIGN KEY (StudentID) references Student(StudentID)
+  FOREIGN KEY (StudentID) references Student(StudentID),
+  FOREIGN KEY (CourseID) references Course(CourseId)
 ) ENGINE=InnoDB;
 
  CREATE TABLE Users (
